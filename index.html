@@ -5,27 +5,28 @@
   <title>My landing page</title>
   <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
-  <!-- We need this line below for responsiveness! -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  <!-- We need this line below for responsiveness! -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <div class="container">
-  <!-- code a Hero / Banner section -->
-  <div class="header">
-    <a href="#default" class="logo">Artificial Intelligence Model</a>
-    <div class="header-right">
-      <a class="active" href="#home">Home</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+  <div class="container my-6">
+
+
+  <div class="jumbotron">
+      <h2 class="display-6">Machine Learning App</h2>
+      <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+      <hr class="my-4">
+      <p>For more information contact Ryan Ashton.</p>
+      <a class="btn btn-dark btn-sm" href="#" role="button">Contact</a>
     </div>
-  </div>
-  <br>
+
+
 
   <!-- code a "How it works" section -->
   
-
     <div class="hero-image">
       <div class="hero-text">
         <h1>TEST</h1>
@@ -34,13 +35,14 @@
               Illum culpa consequuntur magnam suscipit dolor impedit aperiam tempora
               nulla earum consequatur eius corporis autem, placeat doloremque
                 repellat sequi laborum pariatur. Ipsam.</p>
-    <!-- <img src="images/AI.jpg" alt="ai"> -->
+
       </div>
     </div>
-    <br>
 
+  <div class="jumbotron"> 
     <form action="/action_page.php">
-        <h2>Inputs for Prediction</h2>
+        <h4><strong>Inputs for Prediction</strong></h4>
+        <hr class="my-4">
       <div class="input-container">
         <i class="fas fa-calculator"></i>
         <input class="input-field" type="text" placeholder="Input 1" name="inp1">
@@ -56,16 +58,16 @@
         <input class="input-field" type="text" placeholder="Input 3" name="inp3">
       </div>
     
-      <button type="submit" class="btn">Calculate</button>
+      <button type="submit" class="btn btn-secondary btn-lg btn-block">Calculate</button>
     </form>
-    <br>
+  </div>
   
     
 
     <!-- code a footer -->
-    <div>      
+    <div class="jumbotron">      
       <div class="footer">
-        <p>Footer</p>
+        <p>Display Answer</p>
       </div>
     </div>
   </div>

@@ -13,7 +13,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: Poppins;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -28,13 +28,8 @@ p {
   margin: 0 auto;
 }
 
-/* Custom design below! */
 
-.header {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
-}
+
 
 /* Style the header links */
 .header a {
@@ -56,7 +51,7 @@ p {
 
 /* Change the background color on mouse-over */
 .header a:hover {
-  background-color: #ddd;
+  background-color: #6B818C;
   color: black;
 }
 
@@ -72,7 +67,7 @@ p {
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .header a {
     float: none;
     display: block;
@@ -94,10 +89,10 @@ p {
 
 /* Style the form icons */
 .icon {
-  padding: 10px;
-  background: dodgerblue;
+  padding: 1px;
+  background: #6B818C;
   color: white;
-  min-width: 50px;
+  min-width: 500px;
   text-align: center;
 }
 
@@ -112,16 +107,7 @@ p {
   border: 2px solid dodgerblue;
 }
 
-/* Set a style for the submit button */
-.btn {
-  background-color: dodgerblue;
-  color: white;
-  padding: 15px 25px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
+
 
 .btn:hover {
   opacity: 1;
@@ -129,23 +115,23 @@ p {
 
 .fas {
   border: 1px solid black;
-  padding: 10px;
-  background: dodgerblue;
+  padding: 16px;
+  background: #35605A;
   color: white;
   min-width: 50px;
-  text-align: center;
+  text-align: justify;
 }
 
 
 
 .footer {
   
-  left: 0;
-  bottom: 0;
   width: 100%;
-  background-color: red;
+  height: 50px;
+  background-color: #101935;
   color: white;
   text-align: center;
+  padding: 15px 25px;
 }
 
 .hero-image {
@@ -154,6 +140,7 @@ p {
   display: flex;
   justify-content: center; 
   align-items: center;
+  border-radius: 4px;
 
   /* Set a specific height */
   height: 300px;
@@ -162,6 +149,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 10px;
 }
 
 /* Place text in the middle of the image */

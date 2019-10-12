@@ -10,8 +10,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  <!-- We need this line below for responsiveness! -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+
+
+
 </head>
 <body>
+
 
   <div class="container my-6">
 
@@ -33,7 +37,7 @@
         <h1>WINE ROBOT</h1>
         <p>Hello, World. I am Wine Robot. I have been learning from wine critics about what makes expensive wine.
           What I call 'expensive' is something over $40 as that was the 75th percentile from my training. I am currently
-          about 81% accurate.
+          about 81% accurate. Please write as much as you can as I am still learning :)
         </p>
 
       </div>
@@ -57,7 +61,7 @@
   
     <!-- Display Results -->
     <div class="jumbotron">   
-      <div class="results">
+      <div class="results" id="result">
         {% if prediction == 1%}
         <h4 style="color:rgb(2, 76, 53);text-align:justify;">This would likely be an expensive wine!</h4>
         {% elif prediction == 0%}

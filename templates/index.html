@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wine Price - ML APP</title>
+  <form action="{{ url_for('predict')}}" method="post"></form>
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  <!-- We need this line below for responsiveness! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+</head>
+<body>
+
+  <div class="container my-6">
+
+
+  <div class="jumbotron">
+      <h2 class="display-6">Is Your Wine Expensive?</h2>
+      <p class="lead">Describe a wine below and the robot will tell you if it would be expensive or not. </p>
+      <hr class="my-4">
+      <p>For more information contact Ryan Ashton.</p>
+      <a class="btn btn-dark btn-sm" href="#" role="button">Contact</a>
+    </div>
+
+
+
+  <!-- code a "How it works" section -->
+  
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>WINE ROBOT</h1>
+        <p>Hello, World. I am Wine Robot. I have been learning from wine critics about what makes expensive wine.
+          What I call 'expensive' is something over $40 as that was the 75th percentile from my training. I am currently
+          about 81% accurate.
+        </p>
+
+      </div>
+    </div>
+
+  <div class="jumbotron"> 
+    <form action="{{ url_for('predict')}}" method="POST">
+        <h4><strong>Describe your wine</strong></h4>
+        <hr class="my-4">
+      <div class="input-container">
+        <textarea name="message" type="text" placeholder="Eg. Juicy red-cherry fruit and a compelling hint of caramel.." id="form10" class="md-textarea form-control" rows="5"></textarea>
+      </div>
+      <br>
+      <div>
+      <button type="submit" class="btn btn-secondary btn-lg btn-block" value="predict">Calculate</button>
+    </div>
+    </form>
+    <br>
+    <div><h6><i>Result will appear below (after you press calculate)</i></h6></div>
+  </div>
+  
+    <!-- Display Results -->
+    <div class="jumbotron">   
+      <div class="results">
+        {% if prediction == 1%}
+        <h4 style="color:rgb(2, 76, 53);text-align:justify;">This would likely be an expensive wine!</h4>
+        {% elif prediction == 0%}
+        <h4 style="color:rgb(230, 9, 9);text-align:justify;">There is either not enough information or not the right charactertics described to suggest this would be an expensive wine... </h4>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+

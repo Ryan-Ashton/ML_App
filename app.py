@@ -18,7 +18,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/',methods=['POST'])
 def predict():
   global my_prediction
 
@@ -30,6 +30,7 @@ def predict():
     my_prediction = clf.predict(vect)
     print(my_prediction)
   return render_template('index.html', prediction = my_prediction)
+
 
 
 if __name__ == '__main__':

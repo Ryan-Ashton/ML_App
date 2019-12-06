@@ -11,3 +11,7 @@ The contributors to this project is:
 - Sisi Florensia
 - Andre Untem
 - Ryan Ashton
+
+Current Look (To be updated):
+
+![alt text](Current_Look.JPG)

@@ -17,40 +17,13 @@
 <body>
 
 
-  <div class="container my-6">
-
-
-  <div class="jumbotron">
-      <h2 class="display-6">Is Your Wine Expensive?</h2>
-      <p class="lead">Describe a wine below and the robot will tell you if it would be expensive or not. </p>
-      <hr class="my-4">
-      <p>For more information contact Ryan Ashton.</p>
-      <a class="btn btn-dark btn-sm" href="#" role="button">Contact</a>
-    </div>
-
-
-
-  <!-- code a "How it works" section -->
-  
-    <div class="hero-image">
-      <div class="hero-text">
-        <h1>WINE ROBOT</h1>
-        <p>Hello, World. I am Wine Robot. I have been learning from wine critics about what makes expensive wine.
-          What I call 'expensive' is something over $60 as that was the 90th percentile from my training. I am currently
-          about 89% accurate. Please write as much as you can as I need all the help I can get :)
-        </p>
-
-      </div>
-    </div>
-
   <div class="jumbotron"> 
-    <form name="calculate" action="{{ url_for('predict')}}" method="POST">
+    <form name="calculate" action="{{ url_for('predict')}}" method="POST">          
+
         <h4><strong>Describe your wine</strong></h4>
         <hr class="my-4">
       <div class="input-container">
-        <textarea name="message" type="text"
-          placeholder="Eg. The purest Cabernet Sauvignon fruit, with dark chocolate and intense dark berry flavors. The tannins are so enveloped by the fruit and yet they promise great aging. At this stage, wood shows through the fruit, but the texture is so rich and opulent that it should easily become integrated..."
-          id="form10" class="md-textarea form-control" rows="5"></textarea>
+        <textarea name="message" type="text" placeholder="Try again, be very descriptive.." id="form10" class="md-textarea form-control" rows="5"></textarea>
       </div>
       <br>
       <div>
@@ -81,8 +54,10 @@
         <h4 style="color:rgb(230, 9, 9);text-align:justify;">There is either not enough information or not the right charactertics described to suggest this would be an expensive wine... </h4>
         {% endif %}
       </div>
+                
     </div>
   </div>
+  <a href="http://127.0.0.1:5000/">Back to Home</a>
 
 
 </body>
